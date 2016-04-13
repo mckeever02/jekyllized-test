@@ -1,0 +1,16 @@
+<nav id="{{page.hash_link:}}" class='treatment-nav'>
+  <div class="nav-gradient"></div>
+  <div class="nav-container">
+    <ul>
+      {% for link in site.sub_navigation %}
+        {% assign active = nil %}
+        {% if page.url contains link.url %}
+            {% assign active = 'active' %}
+        {% endif %}
+      <li class="{{active}}">
+        <a class="u-ttu link-reverse u-tdn text-spaced u-text-center" href="{{ link.url }}">{{ link.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div><!-- /container -->
+</nav>

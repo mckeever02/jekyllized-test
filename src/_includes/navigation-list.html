@@ -1,0 +1,11 @@
+<ul>
+  {% for link in site.navigation %}
+        {% assign current = nil %}
+        {% if page.url contains link.url %}
+            {% assign current = 'active' %}
+        {% endif %}
+      <li class="{{current}}">
+          <a id="{{link.id}}" href="{{link.url | remove_first:'/'}}">{{link.title}}</a>
+      </li>
+  {% endfor %}
+</ul>

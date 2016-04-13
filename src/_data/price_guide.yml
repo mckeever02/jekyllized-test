@@ -1,0 +1,75 @@
+- name: New Patient Consultation
+  price: £30
+  category: General
+
+- name: Routine consultation and oral health screen
+  price: £30
+  category: General
+
+- name: Scale and polish
+  price: £30
+  category: General
+
+- name: Scale and polish
+  price: £30
+  category: General
+
+- name: Radiographs (per film)
+  price: £10
+  category: General
+
+- name: Emergency Appointment
+  price: £30
+  category: General
+
+- name: White
+  price: From £60
+  category: Fillings
+
+- name: Silver
+  price: From £45
+  category: Fillings
+
+- name: Incisor/Premolar
+  price: £160/£210
+  category: Endodontics
+
+- name: Molar
+  price: £300
+  category: Endodontics
+
+- name: Extraction
+  price: £60
+  category: Extraction
+
+- name: Surgical Extraction
+  price: £90
+  category: Extraction
+
+- name: Crowns Metal/Gold/tooth coloured
+  price: £300/£500/£420
+  category: Crowns, Veneers, Bridges and Dentures
+
+- name: Bridge (per tooth)
+  price: From £450
+  category: Crowns, Veneers, Bridges and Dentures
+
+- name: Veneer
+  price: From £350
+  category: Crowns, Veneers, Bridges and Dentures
+
+- name: Acrylic denture
+  price: From £600
+  category: Crowns, Veneers, Bridges and Dentures
+
+- name: Metal Denture
+  price: From £700
+  category: Crowns, Veneers, Bridges and Dentures
+
+- name: Sports Mouthguard
+  price: £40
+  category: Other
+
+- name: Teeth Whitening
+  price: £200
+  category: Other

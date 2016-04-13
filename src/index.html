@@ -1,0 +1,175 @@
+---
+layout: default
+regenerate: true
+title: "Dental Solutions, Eglington &ndash; Top quality private Dentistry"
+---
+<div class="row">
+  <div class="section-hero">
+    <div class="container container-large">
+      <ul class="u-lstn slider">
+        {% for item in site.data.slider_content %}
+        <li class="slider-item slider-item-bride">
+          <div class="row">
+            <div class="one-half column">
+              {% if item.image_name_2x == null %}
+                <img class="lazyload" src="assets/images/{{ item.image_name }}" data-src="assets/images/{{ item.image_name }}">
+              {% else %}
+                <img class="lazyload" data-sizes="auto" src="assets/images/{{ item.image_name }}" data-src="assets/images/{{ item.image_name }}" data-srcset="assets/images/{{ item.image_name }}, assets/images/{{ item.image_name_2x}} 2x" alt="{{ item.image_alt_text }}">
+              {% endif %}
+            </div>
+            <div class="one-half column">
+              <h2 class="title-slider title-spaced u-ttu">{{ item.title }}</h2>
+              <p>{{ item.text }}.</p>
+              <a href="{{ item.button_link }}" class="button button-ghost-blue button-wide">{{ item.button_text }}</a>
+            </div><!-- /column -->
+          </div><!-- /row -->
+        </li>
+        {% endfor %}
+      </ul>
+    </div><!-- /container-large -->
+  </div><!-- /u-text-center -->
+</div><!-- /row -->
+</section>
+
+<section id="results" class="section-page section-page-medium section-white u-flex-center-center section-stunning-results">
+<div class="container">
+<div class="u-text-center">
+
+  <h2 class="title-large title-spaced u-ttu text-shadow-blue">Stunning<br> Results</h2>
+  <p class="text-large text-shadow-blue">We have many years experience at treating challenging cases and have many happy patients who can testify to the quality of our work and care.</p>
+
+  <a href="/treatments" class="button section-button-action">Before & After Gallery</a>
+
+</div><!-- /u-text-center -->
+
+</div><!-- /container -->
+</section>
+
+<section class="section-page section-page-small u-flex-center-center section-quote">
+<div class="container container-small ">
+<div class="quote quote-large section-quote-large">
+  {% for testimonial in site.testimonials limit:1 %}
+  <blockquote>
+    {{testimonial.content}}
+  </blockquote>
+  <author class="color-blue ">{{testimonial.author}}</author>
+  {% endfor %}
+</div><!-- /quote -->
+<p class="u-mb0"><a class='secondary-link u-tdn' href="testimonials.html">View more</a></p>
+</div><!-- /container -->
+</section>
+
+<section class="section-page section-page-medium section-white u-flex-center-center section-laugh">
+<div class="overlay overlay-dark"></div>
+<div class="container container-overlay">
+  <div class="u-text-center">
+    <h2 class="title-large title-spaced u-ttu u-text-center">Love to laugh</h2>
+  </div><!-- /u-text-center -->
+  <p class="text-large text-shadow-blue-light">Life is there to be lived and no one should have to be conscious or embarrassed by their teeth, whether it is loose dentures, crooked teeth or discoloured teeth we are able to help give you the confidence to smile again.</p>
+
+  <div class="u-text-center">
+    <a href="/treatments" class="button button-blue-ghost section-button-action">Find out more</a>
+  </div><!-- /u-text-center -->
+</div><!-- /container -->
+</section>
+
+<section class="section-page section-page-medium section-no-padding">
+<div class="flex-grid">
+<div class="flex-grid-item two-pane-grid-item qualified-staff-item">
+    <h3 class="subtitle u-text-center title-spaced u-ttu text-shadow-light">Highly Qualified<br> Staff</h3>
+    <p class="text-spaced text-shadow-light">Both Ciaran & Diana have a Masters in restorative dentistry less than 10 dentists in the north have this qualification, WHICH involves an additional 5 years of training.</p>
+</div><!-- /flex-grid-item -->
+<div class="flex-grid-item two-pane-grid-item dental-referrals-item">
+    <h3 class="subtitle u-text-center title-spaced u-ttu text-shadow-light">Dental<br> Referrals</h3>
+    <p class="text-spaced color-white text-shadow-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas gravida odio et blandit. Nullam aliquet odio in urna lacinia aliquet.</p>
+</div><!-- /flex-grid-item -->
+<div class="flex-grid-item two-pane-grid-item kids-item">
+    <h3 class="subtitle u-text-center title-spaced u-ttu text-shadow-light">We're good<br> with Kids</h3>
+    <p class="text-spaced color-white text-shadow-light">We are a child friendly practice that believes prevention is better than cure. We work hard to ensure that your child always enjoys coming to the dentist!</p>
+</div><!-- /flex-grid-item -->
+<div class="flex-grid-item two-pane-grid-item dental-treatments-item">
+    <h3 class="subtitle u-text-center title-spaced u-ttu text-shadow-light">Cutting edge Dental<br> Treatments</h3>
+    <p class="text-spaced text-shadow-light">We excel at treating the most challenging and complex cases, as both our dentists have went through many extra years training to obtain a Masters in Restorative Dentistry.</p>
+</div><!-- /flex-grid-item -->
+</div><!-- /flex-grid -->
+</section>
+
+<section id="form-section" class="section-page section-bg-white">
+<div class="container row">
+<h2 class="title-large title-spaced u-ttu u-text-center">Let's talk</h2>
+</div><!-- /container -->
+<div class="container container-small">
+<div id="form-messages"></div>
+<form id="treatment-form" class="form treatment-form" method="post" action="http://mailthis.to/mckeever02">
+  <div class="form-section-one">
+    <div class="form-row">
+      <label class="primary-label"><span>1</span> What treatment are you interested in?*</label>
+      <div class="form-controls">
+        <ul class="list-none">
+          <li><label for="implants"><input type="radio" name="treatment" id="implants" checked> Implants</label></li>
+          <li><label for="cosmetic-crowns"><input type="radio" name="treatment" id="cosmetic-crowns"> Cosmetic Crowns</label></li>
+          <li><label for="straightening-teeth"><input type="radio" name="treatment" id="straightening-teeth"> Straightening Teeth</label></li>
+          <li><label for="denture-stabilisation"><input type="radio" name="treatment" id="denture-stabilisation"> Denture Stabilisation</label></li>
+          <li><label for="smile-makeovers"><input type="radio" name="treatment" id="smile-makeovers"> Smile makeovers</label></li>
+          <li><label for="veneers"><input type="radio" name="treatment" id="veneers" > Veneers</label></li>
+          <li><label for="whitening"><input type="radio" name="whitening" id="whitening" > Whitening</label></li>
+        </ul>
+      </div><!-- /form-controls -->
+    </div><!-- /form-row -->
+    <div class="form-row">
+      <div class="form-controls">
+        <button type="button" href="javscript:void(0)" class="button button-blue button-large button-next">Next</button>
+      </div>
+    </div>
+  </div><!-- /form-section-one -->
+
+  <div class="form-section-two">
+    <div class="form-row">
+      <label class="primary-label" for="name"><span>3</span> Whats your Name?*</label>
+      <div class="form-controls">
+        <input class="required form-input" type="text" id="name" required name="name" placeholder="Type your name">
+      </div>
+    </div>
+    <div class="form-row">
+      <label class="primary-label" for="phone"><span>4</span> Phone Number?*</label>
+      <div class="form-controls">
+        <input class="required form-input" type="text" id="phone" name="phone" placeholder="Phone number">
+      </div>
+    </div>
+    <div class="form-row">
+      <label class="primary-label" for="email"><span>5</span> Email Address?*</label>
+      <div class="form-controls">
+        <input class="required form-input" type="email" id="email" required name="email" placeholder="Email address">
+      </div>
+    </div>
+    <div class="form-row">
+      <label class="primary-label" for="comment"><span>6</span> Anything to add?</label>
+      <div class="form-controls">
+        <textarea name="comment" id="comment" class="form-input" cols="30" rows="10" placeholder="Type a comment"></textarea>
+      </div>
+    </div><!-- /form-row -->
+    <div class="row form-row form-controls">
+      <button type="submit" class="button button-blue button-large button-submit">Go</button>
+    </div><!-- /row -->
+  </div><!-- /form-section-two -->
+  <!-- <input type="hidden" name="_confirmation" value="<b>Thank you!</b> We have received your message and will get back to you asap."> -->
+  <input type="hidden" name="_replyto" value="%email">
+  <input type="text" name="_honey" value="" style="display:none">
+  <input type="hidden" name="_after" value="<?php $_SERVER['DOCUMENT_ROOT'] ?>http://dev.dental-solutions:8888#form-section">
+
+
+</form>
+</div><!-- /container -->
+</section>
+
+<section class="section-page section-bg-white section-border">
+<div class="u-center u-text-center">
+<div class="row associations">
+  <div class="one-third column"><img src="assets/images/iaad.svg" alt="IAAD"></div>
+  <div class="one-third column"><img src="assets/images/royal-college-of-surgeons.svg" alt="Royal College of Surgeons"></div>
+  <div class="one-third column"><img src="assets/images/bda.svg" alt="British Drntal Association"></div>
+</div><!-- /row -->
+</div><!-- /container -->
+</section>
+
+{% include social.html %}

@@ -1,0 +1,28 @@
+---
+layout: default
+regenerate: true
+title: "Our Team &ndash; Dental Solutions"
+---
+<section class="section-page">
+  <div class="container container-fluid">
+    {% for member in site.team %}
+      <div class="flex-grid u-flex-v-center team-item" style="background-image: url(assets/images/{{member.image}}.jpg);">
+        <div class="overlay overlay-light"></div>
+          <div class="flex-grid-item">
+            <div class="team-item-content">
+              <div class="team-item-heading">
+                <h2 class="u-ttu title-spaced team-item-title">{{member.name}}</h2>
+                <span class="team-item-initials color-blue">{{member.initials}}</span>
+              </div><!-- /team-item-heading -->
+              <p class="intro-text">{{member.excerpt}}</p>
+              {{member.content}}
+            </div><!-- /team-item-content -->
+          </div><!-- /flex-grid-item -->
+
+          <div class="flex-grid-item">
+            <img class="lazyload" src="assets/images/{{member.image}}.jpg" data-sizes="auto" data-src="assets/images/{{member.image}}.jpg" data-srcset="assets/images/{{member.image}}.jpg, assets/images/{{member.image}}-2x.jpg 2x" alt="{{member.name}}">
+          </div>
+      </div><!-- /team-item -->
+    {% endfor %}
+  </div><!-- /container -->
+</section>

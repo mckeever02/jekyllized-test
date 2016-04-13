@@ -1,0 +1,49 @@
+---
+layout: treatment
+title: "Treatments &ndash; Dental Solutions"
+hash_link: "treatments"
+---
+
+<section class="section-page-large2 u-flex-center-center">
+  <div class="container">
+    {% if page.layout == 'post_treatment' %}
+    <h1 class="title-spaced u-ttu u-text-center">{{post.title}}</h1>
+    {% else %}
+    <h1 class="title-spaced u-ttu u-text-center">The most advanced treatments</h1>
+    {% endif %}
+
+  </div><!-- /container -->
+</section>
+
+{% include treatments-nav.html %}
+
+
+<section class="section-page row">
+  <div class="container container-large">
+    {% for post in site.categories['treatments'] %}
+      <div id="{{ post.link }}" class="treatment-item row">
+        <div class="one-half column">
+          <h2 class="medium-heading medium-weight u-mb-small">{{ post.title }}</h2>
+            <p>{{ post.excerpt }}</p>
+            {% if post.price != null %}
+              <span class="u-ttu text-small text-spaced-small color-blue treatment-item_price">Price guide: {{ post.price }}</span>
+            {% endif %}
+            {% if post.content != "" %}
+              <div class="row">
+                <a class="button button-small button-wide button-ghost-blue" href="{{ post.url }}#treatments">More info</a>
+              </div>
+            {% endif %}
+
+        </div><!-- /column -->
+        <div class="one-half column">
+          <div class="before-after">
+            <img src="http://i.imgur.com/BIHN8KQ.jpg">
+            <img src="http://i.imgur.com/nS6dvpq.jpg">
+          </div>
+
+        </div><!-- /column -->
+      </div><!-- /treatment-item -->
+    {% endfor %}
+
+</div><!-- /container -->
+</section>
